@@ -1,0 +1,92 @@
+@import "../../assets/scss/variables";
+
+.swiper_content {
+  width: 100%;
+  background: url("../../assets/images/about-bg-1-1.png");
+  background-position: center;
+  background-size: cover;
+  background-color: $background-color;
+  padding: 50px 0;
+  .swiper {
+    width: 1150px;
+    margin: 0 auto;
+    max-width: 90%;
+    border-radius: 20px;
+    .swiper-wrapper {
+      .swiper-slide {
+        position: relative;
+        .slide {
+          .slide_image {
+            width: 100%;
+            height: 400px;
+            img {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+              border-radius: 20px;
+            }
+          }
+          .slide_shape {
+            width: 350px;
+            max-width: 85%;
+            position: absolute;
+            bottom: -170px;
+            left: 20px;
+            transform: scale(0);
+            transition: transform 1.3s ease;
+            img {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+            }
+          }
+          .active-shape {
+            transform: scale(1);
+          }
+          .slide_text {
+            position: absolute;
+            bottom: 40px;
+            text-align: center;
+            left: 50px;
+            width: 300px;
+            color: $white;
+            font-size: 20px;
+            font-weight: 600;
+          }
+        }
+      }
+    }
+    .swiper-button-prev,
+    .swiper-button-next {
+      color: $white;
+    }
+    .swiper-pagination {
+      transform: translateY(-370px);
+      .swiper-pagination-bullet {
+        width: 20px;
+        height: 3px;
+        background: $white;
+        border-radius: 0;
+      }
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .swiper_content {
+    .swiper {
+      .swiper-wrapper {
+        .swiper-slide {
+          .slide {
+            .slide_text {
+              width: 200px;
+              font-size: 16px;
+              left: 80px;
+              bottom: 30px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

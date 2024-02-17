@@ -1,0 +1,239 @@
+@import "../../assets/scss/variables";
+
+.item_details {
+  width: 100%;
+  background-color: $background-color;
+  padding: 50px 0;
+  .container {
+    width: 1150px;
+    margin: 0 auto;
+    max-width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    .single_product {
+      display: flex;
+      column-gap: 30px;
+      align-items: center;
+      justify-content: center;
+      .product_img {
+        width: 40%;
+        height: 100%;
+        img {
+          width: 100%;
+          max-width: 100%;
+          height: auto;
+          object-fit: cover;
+          border-radius: 8px;
+        }
+      }
+      .product_content {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        row-gap: 20px;
+        h1 {
+          font-weight: 600;
+          font-size: 32px;
+          color: $primary-color;
+        }
+        p {
+          font-weight: 600;
+          font-size: 32px;
+          span {
+            font-size: 18px;
+            color: $gray-font-color;
+            font-weight: 400;
+          }
+        }
+        .radio_group {
+          display: flex;
+          column-gap: 10px;
+          .chakra-radio {
+            background-color: $white;
+            border: 1px solid $border-color;
+            border-radius: 5px;
+            padding: 10px;
+            width: auto;
+            max-width: 100%;
+            .chakra-radio__control {
+              position: absolute;
+              top: 15px;
+              left: 5px;
+            }
+            h3 {
+              font-size: 16px;
+              text-transform: uppercase;
+              font-weight: 500;
+            }
+            p {
+              font-size: 14px;
+              font-weight: 400;
+            }
+            h3,
+            p {
+              padding-left: 10px;
+            }
+          }
+        }
+        .add_basket {
+          display: flex;
+          column-gap: 10px;
+          .item_counter {
+            display: flex;
+            p {
+              font-size: 18px;
+              border: 1px solid $border-color;
+              width: 50px;
+              height: 50px;
+              font-weight: 400;
+              background-color: $white;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+            }
+            .icons {
+              .chevron_icon {
+                border: 1px solid $border-color;
+                width: 30px;
+                font-weight: 400;
+                height: 25px;
+                font-size: 18px;
+                cursor: pointer;
+              }
+            }
+          }
+          .chakra-button {
+            background-color: $primary-color;
+            color: $white;
+            height: 50px;
+            width: 170px;
+            .add_basket-icon {
+              margin-left: 5px;
+              font-size: 20px;
+            }
+          }
+        }
+        .add_favourites {
+          display: flex;
+          margin-right: 30px;
+          margin-bottom: 10px;
+          align-items: center;
+          justify-content: center;
+          border: 1px solid $border-color;
+          border-radius: 30px;
+          position: relative;
+          height: 30px;
+          background: $white;
+          cursor: pointer;
+          p {
+            font-size: 16px;
+            font-weight: 400;
+            padding: 0 10px 0 40px;
+          }
+          .active {
+            padding: 0 10px;
+          }
+          .favourite_icon {
+            position: absolute;
+            top: 0;
+            padding: 5px;
+            width: 30px;
+            height: 30px;
+            left: 0;
+            font-size: 20px;
+            background-color: $red;
+            border-radius: 50%;
+            color: $white;
+          }
+          .hide_icon {
+            display: none;
+          }
+        }
+        .share {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          column-gap: 10px;
+          p {
+            font-size: 16px;
+            font-weight: 600;
+          }
+          .icon {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            padding: 10px;
+            color: $white;
+          }
+          .facebook_icon {
+            background-color: $facebook-color;
+          }
+          .twitter_icon {
+            background-color: $twitter-color;
+          }
+          .whatsapp_icon {
+            background-color: $whatsapp-color;
+          }
+          .telegram_icon {
+            background-color: $telegram-color;
+          }
+          .gmail_icon {
+            background-color: $gmail-color;
+          }
+        }
+      }
+    }
+    .swiper_container {
+      width: 100%;
+      padding: 50px 0;
+      position: relative;
+      h2 {
+        width: 100%;
+        text-align: center;
+        font-weight: 600;
+        font-size: 32px;
+        padding: 20px 0;
+        color: $primary-color;
+      }
+      .swiper-button-prev,
+      .swiper-button-next {
+        color: $primary-color;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .item_details {
+    .container {
+      .single_product {
+        flex-direction: column;
+        .product_img {
+          width: 100%;
+        }
+        .product_content {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .item_details {
+    .container {
+      .single_product {
+        .product_content {
+          .radio_group {
+            flex-direction: column;
+            row-gap: 20px;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,121 @@
+@import "../../assets/scss/variables";
+
+.contact {
+  width: 100%;
+  padding: 30px 0;
+  background: $background-color;
+  .container {
+    width: 1150px;
+    margin: 0 auto;
+    max-width: 90%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    align-items: center;
+    justify-content: center;
+    h1 {
+      width: 100%;
+      text-align: center;
+      color: $primary-color;
+      font-size: 32px;
+      padding-bottom: 30px;
+    }
+    form {
+      width: 100%;
+      display: grid;
+      gap: 20px;
+      grid-template-columns: repeat(2, 1fr);
+      border: 1px solid $border-color;
+      border-radius: 8px;
+      background: $white;
+      padding: 20px;
+      .input {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        row-gap: 10px;
+        input {
+          width: 100%;
+          border: 1px solid $border-color;
+          background: $white;
+          border-radius: 6px;
+          padding: 14px 20px;
+          outline: none;
+          transition: all 0.3s ease-in-out;
+          border-radius: 5px;
+          caret-color: $primary-color;
+          color: $primary-color;
+          width: 100%;
+          &:focus {
+            border-color: $primary-color;
+          }
+        }
+        p {
+          font-size: 14px;
+          color: $red;
+        }
+      }
+      .textarea {
+        grid-column: 1 / span 2;
+        textarea {
+          border: 1px solid $border-color;
+          background: $white;
+          border-radius: 6px;
+          padding: 14px 20px;
+          outline: none;
+          transition: all 0.3s ease-in-out;
+          border-radius: 5px;
+          caret-color: $primary-color;
+          color: $primary-color;
+          width: 100%;
+          &:focus {
+            border-color: $primary-color;
+          }
+        }
+        p {
+          font-size: 14px;
+          color: $red;
+          display: block;
+        }
+      }
+      button {
+        display: block;
+        width: 180px;
+        padding: 11px 20px;
+        border: 1px solid $primary-color;
+        color: $white;
+        background-color: $primary-color;
+        border-radius: 6px;
+        transition: all 0.3s ease-in-out;
+        &:hover {
+          background: transparent;
+          color: $primary-color;
+        }
+      }
+    }
+    .map {
+      width: 100%;
+      border: 1px solid $border-color;
+      border-radius: 8px;
+      iframe {
+        width: 100%;
+        border-radius: 8px;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .contact {
+    .container {
+      form {
+        grid-template-columns: repeat(1, 1fr);
+        .textarea {
+          grid-column: 1 / span 1;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,165 @@
+@import "../../../assets/scss/variables";
+
+.chakra-portal {
+  position: relative;
+  z-index: 3;
+  .chakra-modal__content-container {
+    .drawer_basket {
+      display: flex;
+      flex-grow: 1;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100%;
+      .loading {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 50px;
+      }
+      .chakra-modal__header {
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px solid $border-color;
+        background-color: $white;
+        padding: 30px 10px;
+        flex-basis: 10%;
+        p {
+          font-size: 22px;
+          font-weight: 600;
+          letter-spacing: 1px;
+          text-transform: uppercase;
+        }
+        .close_icon {
+          font-size: 36px;
+          color: $primary-color;
+          transition: all 0.5s ease-in-out;
+          cursor: pointer;
+          &:hover {
+            transform: rotate(90deg);
+          }
+        }
+      }
+      ::-webkit-scrollbar {
+        width: 5px;
+      }
+      ::-webkit-scrollbar-track {
+        background-color: $background-color;
+      }
+      ::-webkit-scrollbar-thumb {
+        background-color: $gray-font-color;
+      }
+      .chakra-modal__body {
+        border-bottom: 1px solid $border-color;
+        background-color: $white;
+        flex-basis: 70%;
+        display: flex;
+        flex-direction: column;
+        overflow-y: scroll;
+        padding: 0;
+        .empty_basket {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          row-gap: 20px;
+          height: 70%;
+          .cart_icon {
+            font-size: 84px;
+            color: $border-color;
+          }
+          h2 {
+            text-transform: uppercase;
+          }
+          a {
+            border-bottom: 2px solid $border-color;
+            color: $primary-color;
+            text-decoration: none;
+            font-weight: 600;
+          }
+        }
+        .product_basket {
+          display: flex;
+          column-gap: 10px;
+          border-bottom: 1px solid $border-color;
+          padding: 5px 10px;
+          .product_img {
+            width: 90px;
+            height: 90px;
+            img {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+              border-radius: 6px;
+            }
+          }
+          .product_content {
+            display: flex;
+            justify-content: space-between;
+            width: 60%;
+            .product_info {
+              display: flex;
+              flex-direction: column;
+              h2 {
+                font-size: 15px;
+                font-weight: 600;
+                color: $primary-color;
+              }
+              p {
+                font-size: 14px;
+                color: $gray-font-color;
+              }
+            }
+            .close_icon {
+              color: $gray-font-color;
+              font-size: 24px;
+              cursor: pointer;
+            }
+          }
+        }
+      }
+      .chakra-modal__footer {
+        flex-basis: 20%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        width: 100%;
+        padding: 0;
+        .total_basket {
+          display: flex;
+          justify-content: space-between;
+          width: 100%;
+          border-bottom: 1px solid $border-color;
+          padding: 20px;
+          p,
+          span {
+            font-size: 17px;
+            font-weight: 600;
+            text-transform: uppercase;
+          }
+        }
+        .complete_basket {
+          padding: 20px;
+          align-self: center;
+          width: 100%;
+          border-top: 1px solid $border-color;
+          button {
+            color: $white;
+            width: 100%;
+            background-color: $mid-green;
+            height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            text-transform: uppercase;
+            padding: 5px 10px;
+            border-radius: 30px;
+            font-size: 15px;
+          }
+        }
+      }
+    }
+  }
+}
