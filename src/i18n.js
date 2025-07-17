@@ -8,11 +8,29 @@ i18n
   .use(HttpApi)
   .init({
     fallbackLng: "en",
+    ns: [
+      "about",
+      "basket",
+      "checkout",
+      "contact",
+      "faq",
+      "favourites",
+      "footer",
+      "header",
+      "home",
+      "login-register",
+      "notFound",
+      "productDetails",
+      "products",
+      "terms"
+    ],
+    defaultNS: "home",
     interpolation: {
       escapeValue: false,
     },
-    order: ["localstorage"],
+    order: ["localStorage"],
     backend: {
       loadPath: "/locales/{{lng}}/{{ns}}.json",
-    }
+    },
   });
+
