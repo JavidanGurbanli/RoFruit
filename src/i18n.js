@@ -8,6 +8,8 @@ i18n
   .use(HttpApi)
   .init({
     fallbackLng: "en",
+    supportedLngs: ["en", "az"],
+    nonExplicitSupportedLngs: true,
     ns: [
       "about",
       "basket",
